@@ -1,11 +1,11 @@
 ---
 name: ai-daily-digest
-description: "Fetches RSS feeds from 90 top Hacker News blogs (curated by Karpathy), uses AI to score and filter articles, and generates a daily digest in Markdown with Chinese-translated titles, category grouping, trend highlights, and visual statistics (Mermaid charts + tag cloud). Use when user mentions 'daily digest', 'RSS digest', 'blog digest', 'AI blogs', 'tech news summary', or asks to run /digest command. Trigger command: /digest."
+description: "Fetches RSS feeds from 90 top Hacker News blogs (curated by Karpathy), then the Agent directly scores, filters, summarizes, and generates a daily digest in Markdown — no external AI API needed. Use when user mentions 'daily digest', 'RSS digest', 'blog digest', 'AI blogs', 'tech news summary', or asks to run /digest command. Trigger command: /digest."
 ---
 
 # AI Daily Digest
 
-从 Karpathy 推荐的 90 个热门技术博客中抓取最新文章，通过 AI 评分筛选，生成每日精选摘要。
+从 Karpathy 推荐的 90 个热门技术博客中抓取最新文章，Agent 直接完成评分、分类、摘要和趋势分析，生成每日精选日报。无需任何外部 AI API Key。
 
 ## 命令
 
@@ -27,29 +27,7 @@ description: "Fetches RSS feeds from 90 top Hacker News blogs (curated by Karpat
 
 | 脚本 | 用途 |
 |------|------|
-| `scripts/digest.ts` | 主脚本 - RSS 抓取、AI 评分、生成摘要 |
-
----
-
-## 配置持久化
-
-配置文件路径: `~/.hn-daily-digest/config.json`
-
-Agent 在执行前**必须检查**此文件是否存在：
-1. 如果存在，读取并解析 JSON
-2. 询问用户是否使用已保存配置
-3. 执行完成后保存当前配置到此文件
-
-**配置文件结构**:
-```json
-{
-  "geminiApiKey": "",
-  "timeRange": 48,
-  "topN": 15,
-  "language": "zh",
-  "lastUsed": "2026-02-14T12:00:00Z"
-}
-```
+| `scripts/digest.ts` | RSS 抓取脚本 — 抓取 90 个源并输出 JSON |
 
 ---
 
@@ -69,7 +47,7 @@ Agent 在**每次**运行 `/digest` 时，在回复开头向用户输出以下�
 cat ~/.hn-daily-digest/config.json 2>/dev/null || echo "NO_CONFIG"
 ```
 
-如果配置存在且有 `geminiApiKey`，询问是否复用：
+如果配置存在，询问是否复用：
 
 ```
 question({
@@ -103,7 +81,7 @@ question({
     },
     {
       header: "精选数量",
-      question: "AI 筛选后保留多少篇？",
+      question: "筛选后保留多少篇？",
       options: [
         { label: "10 篇", description: "精简版" },
         { label: "15 篇 (Recommended)", description: "标准推荐" },
@@ -122,39 +100,13 @@ question({
 })
 ```
 
-### Step 1b: AI API Key（Gemini 优先，支持兜底）
-
-如果配置中没有已保存的 API Key，询问：
-
-```
-question({
-  questions: [{
-    header: "Gemini API Key",
-    question: "推荐提供 Gemini API Key 作为主模型（可选再配置 OPENAI_API_KEY 兜底）\n\n获取方式：访问 https://aistudio.google.com/apikey 创建免费 API Key",
-    options: []
-  }]
-})
-```
-
-如果 `config.geminiApiKey` 已存在，跳过此步。
-
-### Step 2: 执行脚本
+### Step 2: 运行 RSS 抓取脚本
 
 ```bash
-mkdir -p ./output
-
-export GEMINI_API_KEY="<key>"
-# 可选：OpenAI 兼容兜底（DeepSeek/OpenAI 等）
-export OPENAI_API_KEY="<fallback-key>"
-export OPENAI_API_BASE="https://api.deepseek.com/v1"
-export OPENAI_MODEL="deepseek-chat"
-
-npx -y bun ${SKILL_DIR}/scripts/digest.ts \
-  --hours <timeRange> \
-  --top-n <topN> \
-  --lang <zh|en> \
-  --output ./output/digest-$(date +%Y%m%d).md
+npx -y bun ${SKILL_DIR}/scripts/digest.ts --hours <timeRange> --output ./output/articles.json
 ```
+
+脚本会抓取 90 个 RSS 源，按时间范围过滤，输出 JSON 文件。
 
 ### Step 2b: 保存配置
 
@@ -162,7 +114,6 @@ npx -y bun ${SKILL_DIR}/scripts/digest.ts \
 mkdir -p ~/.hn-daily-digest
 cat > ~/.hn-daily-digest/config.json << 'EOF'
 {
-  "geminiApiKey": "<key>",
   "timeRange": <hours>,
   "topN": <topN>,
   "language": "<zh|en>",
@@ -171,22 +122,195 @@ cat > ~/.hn-daily-digest/config.json << 'EOF'
 EOF
 ```
 
-### Step 3: 结果展示
+### Step 3: 读取文章数据
+
+Agent 读取 `./output/articles.json`，获取文章列表。JSON 结构：
+
+```json
+{
+  "fetchedAt": "ISO timestamp",
+  "totalFeeds": 92,
+  "successFeeds": 86,
+  "totalArticles": 2000,
+  "timeRangeHours": 48,
+  "recentCount": 40,
+  "articles": [
+    {
+      "title": "Article Title",
+      "link": "https://...",
+      "pubDate": "ISO timestamp",
+      "description": "Article description (max 500 chars)...",
+      "sourceName": "blog.example.com",
+      "sourceUrl": "https://blog.example.com"
+    }
+  ]
+}
+```
+
+### Step 4: Agent 评分与筛选（Agent 直接完成，不调用外部 API）
+
+Agent 根据文章的标题和描述，对每篇文章进行三个维度的评分（1-10 整数）：
+
+**评分维度：**
+
+| 维度 | 含义 | 10分标准 | 1分标准 |
+|------|------|----------|---------|
+| 相关性 (relevance) | 对技术从业者的价值 | 所有技术人都应该知道 | 与技术无关 |
+| 质量 (quality) | 文章深度和写作质量 | 深度分析，原创洞见 | 浅尝辄止 |
+| 时效性 (timeliness) | 当前是否值得阅读 | 正在发生的重大事件 | 过时内容 |
+
+**分类标签（6 选 1）：**
+
+| 分类 ID | 标签 | 覆盖范围 |
+|---------|------|----------|
+| ai-ml | 🤖 AI / ML | AI、机器学习、LLM、深度学习 |
+| security | 🔒 安全 | 安全、隐私、漏洞、加密 |
+| engineering | ⚙️ 工程 | 软件工程、架构、编程语言、系统设计 |
+| tools | 🛠 工具 / 开源 | 开发工具、开源项目、新发布的库/框架 |
+| opinion | 💡 观点 / 杂谈 | 行业观点、个人思考、职业发展 |
+| other | 📝 其他 | 以上都不适合的 |
+
+**操作步骤：**
+1. 浏览所有文章的标题和描述
+2. 为每篇文章打分（relevance + quality + timeliness）、分配分类、提取 2-4 个英文关键词
+3. 按总分（三项之和）排序，取 Top N 篇
+
+### Step 5: Agent 生成摘要（Agent 直接完成，不调用外部 API）
+
+对 Top N 文章，Agent 为每篇生成：
+
+1. **中文标题** (titleZh)：翻译成自然的中文（如果输出语言为中文）
+2. **结构化摘要** (summary)：4-6 句话，包含：
+   - 核心问题/主题（1 句）
+   - 关键论点、技术方案或发现（2-3 句）
+   - 结论或核心观点（1 句）
+3. **推荐理由** (reason)：1 句话说明"为什么值得读"
+
+**摘要要求：**
+- 直接说重点，不要用"本文讨论了..."开头
+- 包含具体技术名词、数据、方案名称
+- 保留关键数字和指标
+- 目标：读者花 30 秒读完摘要，就能决定是否值得花 10 分钟读原文
+
+### Step 6: Agent 生成趋势总结
+
+Agent 根据 Top N 文章，写一段 3-5 句话的"今日看点"：
+- 提炼 2-3 个主要趋势或话题
+- 不逐篇列举，做宏观归纳
+- 风格简洁有力，像新闻导语
+
+### Step 7: Agent 生成 Markdown 日报
+
+Agent 将所有内容组装为 Markdown 文件，写入 `./output/digest-YYYYMMDD.md`。
+
+**报告结构模板：**
+
+```markdown
+# 📰 AI 博客每日精选 — YYYY-MM-DD
+
+> 来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top N
+
+## 📝 今日看点
+
+{趋势总结，3-5 句话}
+
+---
+
+## 🏆 今日必读
+
+🥇 **{中文标题}**
+
+[{英文原标题}]({link}) — {sourceName} · {相对时间} · {分类emoji} {分类名}
+
+> {摘要}
+
+💡 **为什么值得读**: {推荐理由}
+
+🏷️ {关键词1}, {关键词2}, {关键词3}
+
+🥈 **{中文标题}**
+...（同上格式）
+
+🥉 **{中文标题}**
+...（同上格式）
+
+---
+
+## 📊 数据概览
+
+| 扫描源 | 抓取文章 | 时间范围 | 精选 |
+|:---:|:---:|:---:|:---:|
+| {successFeeds}/{totalFeeds} | {totalArticles} 篇 → {recentCount} 篇 | {hours}h | **{topN} 篇** |
+
+### 分类分布
+
+{Mermaid 饼图 - 按分类统计数量}
+
+### 高频关键词
+
+{Mermaid 柱状图 - 关键词频次 Top 12}
+
+### 🏷️ 话题标签
+
+{标签云：**关键词1**(次数) · **关键词2**(次数) · 关键词3(次数) · ...}
+
+---
+
+## {分类emoji} {分类名}
+
+### {序号}. {中文标题}
+
+[{英文原标题}]({link}) — **{sourceName}** · {相对时间} · ⭐ {总分}/30
+
+> {摘要}
+
+🏷️ {关键词}
+
+---
+
+{... 其他分类和文章 ...}
+
+*生成于 YYYY-MM-DD HH:MM | 扫描 N 源 → 获取 N 篇 → 精选 N 篇*
+*基于 [Hacker News Popularity Contest 2025](https://refactoringenglish.com/tools/hn-popularity/) RSS 源列表，由 [Andrej Karpathy](https://x.com/karpathy) 推荐*
+*由「懂点儿AI」制作，欢迎关注同名微信公众号获取更多 AI 实用技巧 💡*
+```
+
+**Mermaid 图表格式：**
+
+饼图：
+```
+pie showData
+    title "文章分类分布"
+    "🤖 AI / ML" : 5
+    "⚙️ 工程" : 4
+    "🛠 工具 / 开源" : 3
+```
+
+柱状图：
+```
+xychart-beta horizontal
+    title "高频关键词"
+    x-axis ["LLM", "Rust", "security"]
+    y-axis "出现次数" 0 --> 8
+    bar [6, 4, 3]
+```
+
+**相对时间格式：**
+- < 60 分钟 → "N 分钟前"
+- < 24 小时 → "N 小时前"
+- < 7 天 → "N 天前"
+- >= 7 天 → YYYY-MM-DD
+
+### Step 8: 结果展示
 
 **成功时**：
 - 📁 报告文件路径
 - 📊 简要摘要：扫描源数、抓取文章数、精选文章数
 - 🏆 **今日精选 Top 3 预览**：中文标题 + 一句话摘要
 
-**报告结构**（生成的 Markdown 文件包含以下板块）：
-1. **📝 今日看点** — AI 归纳的 3-5 句宏观趋势总结
-2. **🏆 今日必读 Top 3** — 中英双语标题、摘要、推荐理由、关键词标签
-3. **📊 数据概览** — 统计表格 + Mermaid 分类饼图 + 高频关键词柱状图 + ASCII 纯文本图（终端友好） + 话题标签云
-4. **分类文章列表** — 按 6 大分类（AI/ML、安全、工程、工具/开源、观点/杂谈、其他）分组展示，每篇含中文标题、相对时间、综合评分、摘要、关键词
-
 **失败时**：
 - 显示错误信息
-- 常见问题：API Key 无效、网络问题、RSS 源不可用
+- 常见问题：网络问题、RSS 源不可用
 
 ---
 
@@ -198,20 +322,14 @@ EOF
 | 48 小时 | `--hours 48` |
 | 72 小时 | `--hours 72` |
 | 7 天 | `--hours 168` |
-| 10 篇 | `--top-n 10` |
-| 15 篇 | `--top-n 15` |
-| 20 篇 | `--top-n 20` |
-| 中文 | `--lang zh` |
-| English | `--lang en` |
 
 ---
 
 ## 环境要求
 
 - `bun` 运行时（通过 `npx -y bun` 自动安装）
-- 至少一个 AI API Key（`GEMINI_API_KEY` 或 `OPENAI_API_KEY`）
-- 可选：`OPENAI_API_BASE`、`OPENAI_MODEL`（用于 OpenAI 兼容接口）
-- 网络访问（需要能访问 RSS 源和 AI API）
+- 网络访问（需要能访问 RSS 源）
+- **不需要任何 AI API Key** — Agent 自身完成所有 AI 处理
 
 ---
 
@@ -227,14 +345,11 @@ EOF
 
 ## 故障排除
 
-### "GEMINI_API_KEY not set"
-需要提供 Gemini API Key，可在 https://aistudio.google.com/apikey 免费获取。
-
-### "Gemini 配额超限或请求失败"
-脚本会自动降级到 OpenAI 兼容接口（需提供 `OPENAI_API_KEY`，可选 `OPENAI_API_BASE`）。
-
 ### "Failed to fetch N feeds"
 部分 RSS 源可能暂时不可用，脚本会跳过失败的源并继续处理。
 
 ### "No articles found in time range"
 尝试扩大时间范围（如从 24 小时改为 48 小时）。
+
+### JSON 文件过大
+如果文章数量很多，Agent 可以只处理前 50-80 篇（按时间排序），然后从中筛选 Top N。

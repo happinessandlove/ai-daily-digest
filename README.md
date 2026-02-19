@@ -2,7 +2,7 @@
 
 skill 制作详情可查看 ➡️ https://mp.weixin.qq.com/s/rkQ28KTZs5QeZqjwSCvR4Q
 
-从 [Andrej Karpathy](https://x.com/karpathy) 推荐的 90 个 Hacker News 顶级技术博客中抓取最新文章，通过 AI 多维评分筛选，生成一份结构化的每日精选日报。默认使用 Gemini，并支持自动降级到 OpenAI 兼容 API。
+从 [Andrej Karpathy](https://x.com/karpathy) 推荐的 90 个 Hacker News 顶级技术博客中抓取最新文章，由 Agent 直接完成评分、分类、摘要和趋势分析，生成结构化的每日精选日报。**无需任何外部 AI API Key**。
 
 ![AI Daily Digest 概览](assets/overview.png)
 
@@ -23,33 +23,38 @@ Agent 会依次询问：
 | 时间范围 | 24h / 48h / 72h / 7天 | 48h |
 | 精选数量 | 10 / 15 / 20 篇 | 15 篇 |
 | 输出语言 | 中文 / English | 中文 |
-| Gemini API Key | 手动输入（首次需要，之后自动记忆） | — |
 
 配置会自动保存到 `~/.hn-daily-digest/config.json`，下次运行可一键复用。
 
-### 直接命令行运行
+## 架构
 
-```bash
-export GEMINI_API_KEY="your-key"
-export OPENAI_API_KEY="your-openai-compatible-key"  # 可选，Gemini 失败时兜底
-export OPENAI_API_BASE="https://api.deepseek.com/v1" # 可选，默认 https://api.openai.com/v1
-export OPENAI_MODEL="deepseek-chat"                  # 可选，不填会自动推断
-npx -y bun scripts/digest.ts --hours 48 --top-n 15 --lang zh --output ./digest.md
 ```
+脚本抓取 RSS → 输出 JSON → Agent 评分/分类/摘要 → 生成 Markdown 日报
+```
+
+1. **脚本层** (`scripts/digest.ts`) — 纯 RSS 抓取器，并发抓取 90 个源，按时间过滤，输出结构化 JSON
+2. **Agent 层** — 读取 JSON 数据，直接完成评分、分类、关键词提取、摘要生成、趋势总结
+3. **输出层** — Agent 将结果组装为 Markdown 日报文件
+
+### 为什么不调外部 API？
+
+- **零成本** — 不需要 Gemini/OpenAI 等 API Key，省钱省心
+- **零配置** — 开箱即用，没有 API Key 失效、配额超限等问题
+- **更好的质量** — 运行 skill 的 Agent（如 Claude）本身就具备强大的理解、评分和摘要能力
 
 ## 功能
 
-### 五步处理流水线
+### 处理流水线
 
 ```
-RSS 抓取 → 时间过滤 → AI 评分+分类 → AI 摘要+翻译 → 趋势总结
+RSS 抓取 → 时间过滤 → Agent 评分+分类 → Agent 摘要+翻译 → Agent 趋势总结 → 生成报告
 ```
 
 1. **RSS 抓取** — 并发抓取 90 个源（10 路并发，15s 超时），兼容 RSS 2.0 和 Atom 格式
 2. **时间过滤** — 按指定时间窗口筛选近期文章
-3. **AI 评分** — AI 从相关性、质量、时效性三个维度打分（1-10），同时完成分类和关键词提取（Gemini 优先，失败自动降级到 OpenAI 兼容接口）
-4. **AI 摘要** — 为 Top N 文章生成结构化摘要（4-6 句）、中文标题翻译、推荐理由
-5. **趋势总结** — AI 归纳当日技术圈 2-3 个宏观趋势
+3. **Agent 评分** — 从相关性、质量、时效性三个维度打分（1-10），同时完成分类和关键词提取
+4. **Agent 摘要** — 为 Top N 文章生成结构化摘要（4-6 句）、中文标题翻译、推荐理由
+5. **Agent 趋势总结** — 归纳当日技术圈 2-3 个宏观趋势
 
 ### 日报结构
 
@@ -59,7 +64,7 @@ RSS 抓取 → 时间过滤 → AI 评分+分类 → AI 摘要+翻译 → 趋势
 |------|------|
 | 📝 今日看点 | 3-5 句话的宏观趋势总结 |
 | 🏆 今日必读 | Top 3 深度展示：中英双语标题、摘要、推荐理由、关键词 |
-| 📊 数据概览 | 统计表格 + Mermaid 饼图（分类分布）+ Mermaid 柱状图（高频关键词）+ ASCII 纯文本图 + 话题标签云 |
+| 📊 数据概览 | 统计表格 + Mermaid 饼图（分类分布）+ Mermaid 柱状图（高频关键词）+ 话题标签云 |
 | 分类文章列表 | 按 6 大分类分组，每篇含中文标题、来源、相对时间、评分、摘要、关键词 |
 
 ### 六大分类体系
@@ -75,67 +80,19 @@ RSS 抓取 → 时间过滤 → AI 评分+分类 → AI 摘要+翻译 → 趋势
 
 ## 亮点
 
-- **零依赖** — 纯 TypeScript 单文件，无第三方库，基于 Bun 运行时的原生 `fetch` 和内置 XML 解析
-- **中英双语** — 所有标题自动翻译为中文，原文标题保留为链接文字，不错过任何语境
-- **结构化摘要** — 不是一句话敷衍了事，而是 4-6 句覆盖核心问题→关键论点→结论的完整概述，30 秒判断一篇文章是否值得读
-- **可视化统计** — Mermaid 图表（GitHub/Obsidian 原生渲染）+ ASCII 柱状图（终端友好）+ 标签云，三种方式覆盖所有阅读场景
-- **智能分类** — AI 自动将文章归入 6 大类别，按类浏览比平铺列表高效得多
-- **趋势洞察** — 不只是文章列表，还会归纳当天技术圈的宏观趋势，帮你把握大方向
-- **配置记忆** — API Key 和偏好参数自动持久化，日常使用一键运行
+- **零依赖零成本** — 纯 TypeScript 单文件抓取器 + Agent 原生 AI 能力，不需要任何 API Key
+- **中英双语** — 所有标题自动翻译为中文，原文标题保留为链接文字
+- **结构化摘要** — 4-6 句覆盖核心问题→关键论点→结论的完整概述
+- **可视化统计** — Mermaid 图表（GitHub/Obsidian 原生渲染）+ 标签云
+- **智能分类** — 自动将文章归入 6 大类别，按类浏览比平铺列表高效
+- **趋势洞察** — 归纳当天技术圈的宏观趋势，帮你把握大方向
+- **配置记忆** — 偏好参数自动持久化，日常使用一键运行
 
 ## 环境要求
 
 - [Bun](https://bun.sh) 运行时（通过 `npx -y bun` 自动安装）
-- 至少一个可用的 AI API Key：
-  - `GEMINI_API_KEY`（[免费获取](https://aistudio.google.com/apikey)）
-  - 或 `OPENAI_API_KEY`（可配合 `OPENAI_API_BASE` 使用 DeepSeek / OpenAI 等 OpenAI 兼容服务）
-- 网络连接
-
-## 切换 AI 模型提供商
-
-本项目默认使用 Gemini API（免费），如果你希望替换为其他模型提供商（如 OpenAI、Anthropic、DeepSeek、通义千问等），可以借助 AI 编码助手一键完成。
-
-### 方法：让 AI 帮你改
-
-在你使用的 AI 编码工具（如 Claude Code、Cursor、GitHub Copilot 等）中，直接发送以下 prompt：
-
-```
-请修改 scripts/digest.ts，将 AI 提供商从 Gemini 替换为 [你想用的提供商]。
-
-需要修改的部分：
-1. 常量 GEMINI_API_URL（第 9 行）— 替换为目标 API 的 endpoint
-2. 函数 callGemini（约第 363 行）— 修改 request body 格式和 response 解析逻辑以适配目标 API
-3. 环境变量名 GEMINI_API_KEY — 改为对应的 key 名称（如 OPENAI_API_KEY）
-4. SKILL.md 和 README.md 中的相关说明文字
-
-要求：
-- 保持函数签名不变（输入 prompt 字符串，返回 string）
-- 保持 temperature 等参数的语义等价
-- 更新 CLI 帮助文本和错误提示中的 key 名称
-```
-
-### 改动范围说明
-
-整个项目只有一个脚本文件 `scripts/digest.ts`，AI 调用逻辑集中在两处：
-
-| 位置 | 说明 |
-|------|------|
-| `GEMINI_API_URL` 常量 | API endpoint 地址 |
-| `callGemini()` 函数 | 请求构造 + 响应解析，约 25 行代码 |
-
-其余所有代码（RSS 抓取、评分 prompt、摘要 prompt、报告生成）均与 AI 提供商无关，无需修改。Prompt 内容本身是通用的，切换模型后可以直接复用。
-
-### 常见替换示例
-
-| 提供商 | API Endpoint | Key 环境变量 |
-|--------|-------------|-------------|
-| OpenAI | `https://api.openai.com/v1/chat/completions` | `OPENAI_API_KEY` |
-| Anthropic | `https://api.anthropic.com/v1/messages` | `ANTHROPIC_API_KEY` |
-| DeepSeek | `https://api.deepseek.com/v1/chat/completions` | `DEEPSEEK_API_KEY` |
-| 通义千问 | `https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions` | `DASHSCOPE_API_KEY` |
-| OpenAI 兼容 API | 自定义 endpoint | 自定义 |
-
-> 💡 如果目标提供商兼容 OpenAI API 格式（如 DeepSeek、Groq、Together AI 等），改动量更小 — 只需换 URL 和 Key，request/response 格式相同。
+- 网络连接（访问 RSS 源）
+- **不需要任何 AI API Key**
 
 ## 信息源
 
