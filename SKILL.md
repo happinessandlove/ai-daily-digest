@@ -301,12 +301,22 @@ xychart-beta horizontal
 - < 7 天 → "N 天前"
 - >= 7 天 → YYYY-MM-DD
 
-### Step 8: 结果展示
+### Step 8: 提交到 Git
+
+Agent 将生成的日报和中间数据提交到 Git 仓库：
+
+```bash
+git add output/articles.json output/digest-YYYYMMDD.md
+git commit -m "digest: YYYY-MM-DD 每日精选 (N 篇)"
+```
+
+### Step 9: 结果展示
 
 **成功时**：
 - 📁 报告文件路径
 - 📊 简要摘要：扫描源数、抓取文章数、精选文章数
 - 🏆 **今日精选 Top 3 预览**：中文标题 + 一句话摘要
+- ✅ Git 提交信息
 
 **失败时**：
 - 显示错误信息
