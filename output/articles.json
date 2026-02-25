@@ -1,274 +1,434 @@
 {
-  "fetchedAt": "2026-02-19T23:30:04.535Z",
+  "fetchedAt": "2026-02-25T23:17:37.414Z",
   "totalFeeds": 92,
-  "successFeeds": 87,
-  "totalArticles": 2165,
+  "successFeeds": 86,
+  "totalArticles": 2166,
   "timeRangeHours": 48,
-  "recentCount": 33,
+  "recentCount": 53,
   "articles": [
     {
-      "title": "Gemini 3.1 Pro",
-      "link": "https://simonwillison.net/2026/Feb/19/gemini-31-pro/#atom-everything",
-      "pubDate": "2026-02-19T17:58:37.000Z",
-      "description": "<p><strong><a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/\">Gemini 3.1 Pro</a></strong></p>\nThe first in the Gemini 3.1 series, priced the same as Gemini 3 Pro ($2/million input, $12/million output under 200,000 tokens, $4/$18 for 200,000 to 1,000,000). That's less than half the price of Claude Opus 4.6 with very similar benchmark scores to that model.</p>\n<p>They boast about its improved SVG animation performance compared to Gemini 3 Pro in the a",
-      "sourceName": "simonwillison.net",
-      "sourceUrl": "https://simonwillison.net"
-    },
-    {
-      "title": "Exploring the signals the dialog manager uses for dismissing a dialog",
-      "link": "https://devblogs.microsoft.com/oldnewthing/20260219-00/?p=112072",
-      "pubDate": "2026-02-19T15:00:00.000Z",
-      "description": "Summarizing the flow.\nThe post Exploring the signals the dialog manager uses for dismissing a dialog appeared first on The Old New Thing.",
-      "sourceName": "devblogs.microsoft.com/oldnewthing",
-      "sourceUrl": "https://devblogs.microsoft.com/oldnewthing"
-    },
-    {
-      "title": "Pluralistic: Six Years of Pluralistic (19 Feb 2026)",
-      "link": "https://pluralistic.net/2026/02/19/now-we-are-six/",
-      "pubDate": "2026-02-19T14:08:05.000Z",
-      "description": "Today's links Six years of Pluralistic: Time flies when you're writing the web. Hey look at this: Delights to delectate. Object permanence: MBA phrenology; Sony's DRM CEO is out; Midwestern Tahrir; Reverse Centaurs and AI. Upcoming appearances: Where to find me. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. Six years of Pluralistic (permalink) Six years ago today, after 19",
-      "sourceName": "pluralistic.net",
-      "sourceUrl": "https://pluralistic.net"
-    },
-    {
-      "title": "Is the Future “AWS for Everything”?",
-      "link": "https://www.construction-physics.com/p/is-the-future-aws-for-everything",
-      "pubDate": "2026-02-19T13:01:06.000Z",
-      "description": "A theme running through my book is the idea that efficiency improvements, and the various methods for making products cheaper over time, have historically been dependent on some degree of repetition, on running your production process over and over again.",
-      "sourceName": "construction-physics.com",
-      "sourceUrl": "https://construction-physics.com"
-    },
-    {
-      "title": "AI is a NAND Maximiser",
-      "link": "https://shkspr.mobi/blog/2026/02/ai-is-a-nand-maximiser/",
-      "pubDate": "2026-02-19T12:34:33.000Z",
-      "description": "PC Gamer is reporting that the current demand by AI companies for computer chips is having a disastrous effect on the rest of the industry.  In an interview, the CEO of Phison said:  If NVIDIA Vera Rubin ships tens of millions of units, each requiring 20+TB SSDs, it will consume approximately 20% of last year's global NAND production capacity  駿HaYaO  NAND is a type of microchip. Rather than b…",
-      "sourceName": "shkspr.mobi",
-      "sourceUrl": "https://shkspr.mobi"
-    },
-    {
-      "title": "Office Space released Feb. 19, 1999",
-      "link": "https://dfarq.homeip.net/office-space-released-feb-19-1999/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=office-space-released-feb-19-1999",
-      "pubDate": "2026-02-19T12:00:58.000Z",
-      "description": "The classic black comedy Office Space debuted in theaters February 19, 1999. It was Mike Judge’s first live-action film. Judge is better known for his animated series Beavis and Butt-Head and King of the Hill, but I’ll argue Office Space\nThe post Office Space released Feb. 19, 1999 appeared first on The Silicon Underground.",
-      "sourceName": "dfarq.homeip.net",
-      "sourceUrl": "https://dfarq.homeip.net"
-    },
-    {
-      "title": "Experimenting with sponsorship for my blog and newsletter",
-      "link": "https://simonwillison.net/2026/Feb/19/sponsorship/#atom-everything",
-      "pubDate": "2026-02-19T05:44:29.000Z",
-      "description": "<p>I've long been resistant to the idea of accepting sponsorship for my blog. I value my credibility as an independent voice, and I don't want to risk compromising that reputation.</p>\n<p>Then I learned about Troy Hunt's <a href=\"https://www.troyhunt.com/sponsorship/\">approach to sponsorship</a>, which he first wrote about <a href=\"https://www.troyhunt.com/im-now-offering-sponsorship-of-this-blog/\">in 2016</a>. Troy runs with a simple text row in the page banner - no JavaScript, no cookies, unob",
-      "sourceName": "simonwillison.net",
-      "sourceUrl": "https://simonwillison.net"
-    },
-    {
-      "title": "SWE-bench February 2026 leaderboard update",
-      "link": "https://simonwillison.net/2026/Feb/19/swe-bench/#atom-everything",
-      "pubDate": "2026-02-19T04:48:47.000Z",
-      "description": "<p><strong><a href=\"https://www.swebench.com/\">SWE-bench February 2026 leaderboard update</a></strong></p>\nSWE-bench is one of the benchmarks that the labs love to list in their model releases. The official leaderboard is infrequently updated but they just did a full run of it against the current generation of models, which is notable because it's always good to see benchmark results like this that <em>weren't</em> self-reported by the labs.</p>\n<p>The fresh results are for their \"Bash Only\" ben",
-      "sourceName": "simonwillison.net",
-      "sourceUrl": "https://simonwillison.net"
-    },
-    {
-      "title": "One More Spitball Idea for Apple’s March 4 Media Event ‘Experience’: Immersive F1 on Vision Pro?",
-      "link": "https://www.formula1.com/en/latest/article/official-grand-prix-start-times-for-2026-f1-season-confirmed.2UgPfArqH76tzlOYh21jSG",
-      "pubDate": "2026-02-19T04:41:38.000Z",
-      "description": "A reader pointed out that the 2026 Formula 1 season starts in Australia on March 8. You will recall from October that Apple TV is now the exclusive broadcast partner for F1 in the U.S. Apple is already dabbling with live immersive sports broadcasting for VisionOS with a limited slate of Lakers games this season. If they have something planned for streaming F1 races live on Vision Pro, with some level of immersion, March 4 would be a pretty good date to demo that experience to the media.\n\nIt does",
+      "title": "Greg Knauss: ‘Lose Myself’",
+      "link": "https://www.eod.com/blog/2026/02/lose-myself/",
+      "pubDate": "2026-02-25T22:53:08.000Z",
+      "description": "Greg Knauss:\n\n\n  People will argue that speaking English to LLMs is just another\nlevel of abstraction away from the physics of how the machine\nactually works. And while that’s technically true — the worst\nkind of true — it also misses the point. Industrialization\nfundamentally changes things, by quantum degrees. A Ding Dong from\na factory is not the same thing as a gâteau au chocolat et crème\nchantilly from a baker which is not the same thing as cramming\nchunks of chocolate and scoops of whipped",
       "sourceName": "daringfireball.net",
       "sourceUrl": "https://daringfireball.net"
     },
     {
-      "title": "LadybirdBrowser/ladybird: Abandon Swift adoption",
-      "link": "https://simonwillison.net/2026/Feb/19/ladybird/#atom-everything",
-      "pubDate": "2026-02-19T01:25:33.000Z",
-      "description": "<p><strong><a href=\"https://github.com/LadybirdBrowser/ladybird/commit/e87f889e31afbb5fa32c910603c7f5e781c97afd\">LadybirdBrowser/ladybird: Abandon Swift adoption</a></strong></p>\nBack <a href=\"https://simonwillison.net/2024/Aug/11/ladybird-set-to-adopt-swift/\">in August 2024</a> the Ladybird browser project announced an intention to adopt Swift as their memory-safe language of choice.</p>\n<p>As of <a href=\"https://github.com/LadybirdBrowser/ladybird/commit/e87f889e31afbb5fa32c910603c7f5e781c97af",
-      "sourceName": "simonwillison.net",
-      "sourceUrl": "https://simonwillison.net"
-    },
-    {
-      "title": "Go Modules for Package Management Tooling",
-      "link": "https://nesbitt.io/2026/02/19/go-modules-for-package-management-tooling.html",
-      "pubDate": "2026-02-19T00:00:00.000Z",
-      "description": "The Go modules behind git-pkgs, rebuilt from my Ruby supply chain libraries.",
-      "sourceName": "nesbitt.io",
-      "sourceUrl": "https://nesbitt.io"
-    },
-    {
-      "title": "Paul Ford: ‘The A.I. Disruption Has Arrived, and It Sure Is Fun’",
-      "link": "https://www.nytimes.com/2026/02/18/opinion/ai-software.html?unlocked_article_code=1.NFA.djaw.TBlAp8kE_N-i",
-      "pubDate": "2026-02-18T21:15:10.000Z",
-      "description": "Paul Ford, in an op-ed for The New York Times (gift link):\n\n\n  All of the people I love hate this stuff, and all the people I hate love it. And yet, likely because of the same personality flaws that drew me to technology in the first place, I am annoyingly excited.\n\n\n\n ★",
+      "title": "The Talk Show: ‘Serious Opinionators’",
+      "link": "https://daringfireball.net/thetalkshow/2026/02/25/ep-441",
+      "pubDate": "2026-02-25T22:17:57.000Z",
+      "description": "Adam Engst returns to the show to talk, in detail, about certain of the UI changes in iOS 26 and Apple’s version 26 OSes overall. In particular, the new Unified view in the Phone app, and the Filter pop-up menu in both the Phone and Messages apps. Also: a shoutout to Balloon Help.\n\n\n\nSponsored by:\n\n\nSentry: A real-time error monitoring and tracing platform. Use code TALKSHOW for $80 in free credits.\nSquarespace: Save 10% off your first purchase of a website or domain using code talkshow.\nFactor:",
       "sourceName": "daringfireball.net",
       "sourceUrl": "https://daringfireball.net"
     },
     {
-      "title": "Frigate with Hailo for object detection on a Raspberry Pi",
-      "link": "https://www.jeffgeerling.com/blog/2026/frigate-with-hailo-for-object-detection-on-a-raspberry-pi/",
-      "pubDate": "2026-02-18T20:50:00.000Z",
-      "description": "<p>I run <a href=\"https://frigate.video\">Frigate</a> to record security cameras and detect people, cars, and animals when in view. My <a href=\"https://www.jeffgeerling.com/blog/2024/building-pi-frigate-nvr-axzezs-interceptor-1u-case/\">current Frigate server</a> runs on a Raspberry Pi CM4 and a <a href=\"https://amzn.to/4aWdOpQ\">Coral TPU</a> plugged in via USB.</p>\n<p>Raspberry Pi offers <a href=\"https://www.raspberrypi.com/products/ai-hat/\">multiple AI HAT+'s</a> for the Raspberry Pi 5 with buil",
-      "sourceName": "jeffgeerling.com",
-      "sourceUrl": "https://jeffgeerling.com"
-    },
-    {
-      "title": "A Few Rambling Observations on Care",
-      "link": "https://blog.jim-nielsen.com/2026/observations-on-care/",
-      "pubDate": "2026-02-18T19:00:00.000Z",
-      "description": "<p>In this new AI world, “taste” is the thing everyone claims is the new supreme skill.</p>\n<p>But I think “care” is the one I want to see in the products I buy.</p>\n<hr>\n<p>Can you measure care?</p>\n<p>Does scale drive out care?</p>\n<p>If a product conversation is reduced to being arbitrated exclusively by numbers, is care lost?</p>\n<p>The more I think about it, care seems antithetical to <a href=\"https://blog.jim-nielsen.com/2025/measurement-and-numbers/\" >the reductive nature of quantificatio",
-      "sourceName": "blog.jim-nielsen.com",
-      "sourceUrl": "https://blog.jim-nielsen.com"
-    },
-    {
-      "title": "Typing without having to type",
-      "link": "https://simonwillison.net/2026/Feb/18/typing/#atom-everything",
-      "pubDate": "2026-02-18T18:56:56.000Z",
-      "description": "<p>25+ years into my career as a programmer I think I may <em>finally</em> be coming around to preferring type hints or even strong typing. I resisted those in the past because they slowed down the rate at which I could iterate on code, especially in the REPL environments that were key to my productivity. But if a coding agent is doing all that <em>typing</em> for me, the benefits of explicitly defining all of those types are suddenly much more attractive.</p>\n\n    <p>Tags: <a href=\"https://simo",
+      "title": "tldraw issue: Move tests to closed source repo",
+      "link": "https://simonwillison.net/2026/Feb/25/closed-tests/#atom-everything",
+      "pubDate": "2026-02-25T21:06:53.000Z",
+      "description": "<p><strong><a href=\"https://github.com/tldraw/tldraw/issues/8082\">tldraw issue: Move tests to closed source repo</a></strong></p>\nIt's become very apparent over the past few months that a comprehensive test suite is enough to build a completely fresh implementation of any open source library from scratch, potentially in a different language.</p>\n<p>This has worrying implications for open source projects with commercial business models. Here's an example of a response: tldraw, the outstanding col",
       "sourceName": "simonwillison.net",
       "sourceUrl": "https://simonwillison.net"
     },
     {
-      "title": "The A.I. Disruption We’ve Been Waiting for Has Arrived",
-      "link": "https://simonwillison.net/2026/Feb/18/the-ai-disruption/#atom-everything",
-      "pubDate": "2026-02-18T17:07:31.000Z",
-      "description": "<p><strong><a href=\"https://www.nytimes.com/2026/02/18/opinion/ai-software.html?unlocked_article_code=1.NFA.UkLv.r-XczfzYRdXJ&amp;smid=url-share\">The A.I. Disruption We’ve Been Waiting for Has Arrived</a></strong></p>\nNew opinion piece from Paul Ford in the New York Times. Unsurprisingly for a piece by Paul it's packed with quoteworthy snippets, but a few stood out for me in particular.</p>\n<p>Paul describes the <a href=\"https://simonwillison.net/2026/Jan/4/inflection/\">November moment</a> that ",
+      "title": "Samsung Galaxy S26 Ultra’s Privacy Display",
+      "link": "https://9to5google.com/2026/02/25/samsung-galaxy-s26-ultra-privacy-display-demo-hands-on/",
+      "pubDate": "2026-02-25T20:59:30.000Z",
+      "description": "Ben Schoon, writing for 9to5 Google:\n\n\n  When activated, Privacy Display changes how the pixels in your\ndisplay emit light, making it harder or near-impossible to view\nthe display at an off-angle. At its default setting, it definitely\nworks, but the contents of the display are visible at less-sharp\nangles. Samsung has a “maximum” setting that takes this up a\nnotch, and that setting makes it even harder to see the contents\nand narrows the field-of-view even further. [...]\n\nA bigger deal, though, ",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Code Red for Humanity?",
+      "link": "https://garymarcus.substack.com/p/code-red-for-humanity",
+      "pubDate": "2026-02-25T18:43:19.000Z",
+      "description": "The Trump administration is literally playing with fire.",
+      "sourceName": "garymarcus.substack.com",
+      "sourceUrl": "https://garymarcus.substack.com"
+    },
+    {
+      "title": "Claude Code Remote Control",
+      "link": "https://simonwillison.net/2026/Feb/25/claude-code-remote-control/#atom-everything",
+      "pubDate": "2026-02-25T17:33:24.000Z",
+      "description": "<p><strong><a href=\"https://code.claude.com/docs/en/remote-control\">Claude Code Remote Control</a></strong></p>\nNew Claude Code feature dropped yesterday: you can now run a \"remote control\" session on your computer and then use the Claude Code for web interfaces (on web, iOS and native desktop app) to send prompts to that session.</p>\n<p>It's a little bit janky right now. Initially when I tried it I got the error \"Remote Control is not enabled for your account. Contact your administrator.\" (but ",
       "sourceName": "simonwillison.net",
       "sourceUrl": "https://simonwillison.net"
     },
     {
-      "title": "Quoting Martin Fowler",
-      "link": "https://simonwillison.net/2026/Feb/18/martin-fowler/#atom-everything",
-      "pubDate": "2026-02-18T16:50:07.000Z",
-      "description": "<blockquote cite=\"https://martinfowler.com/fragments/2026-02-18.html\"><p>LLMs are eating specialty skills. There will be less use of specialist front-end and back-end developers as the LLM-driving skills become more important than the details of platform usage. Will this lead to a greater recognition of the role of <a href=\"https://martinfowler.com/articles/expert-generalist.html\">Expert Generalists</a>? Or will the ability of LLMs to write lots of code mean they code around the silos rather tha",
+      "title": "★ My 2025 Apple Report Card",
+      "link": "https://daringfireball.net/2026/02/my_2025_apple_report_card",
+      "pubDate": "2026-02-25T16:49:10.000Z",
+      "description": "A mixed year.",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "I vibe coded my dream macOS presentation app",
+      "link": "https://simonwillison.net/2026/Feb/25/present/#atom-everything",
+      "pubDate": "2026-02-25T16:46:19.000Z",
+      "description": "<p>I gave a talk this weekend at Social Science FOO Camp in Mountain View. The event was a classic unconference format where anyone could present a talk without needing to propose it in advance. I grabbed a slot for a talk I titled \"The State of LLMs, February 2026 edition\", subtitle \"It's all changed since November!\". I vibe coded a custom macOS app for the presentation the night before.</p>\r\n<p><img src=\"https://static.simonwillison.net/static/2026/state-of-llms.jpg\" alt=\"A sticky note on a bo",
       "sourceName": "simonwillison.net",
       "sourceUrl": "https://simonwillison.net"
     },
     {
-      "title": "Stream of Consciousness Driven Development",
-      "link": "https://buttondown.com/hillelwayne/archive/stream-of-consciousness-driven-development/",
-      "pubDate": "2026-02-18T16:33:08.000Z",
-      "description": "<p>This is something I just tried out last week but it seems to have enough potential to be worth showing unpolished. I was pairing with a client on writing a spec. I saw a problem with the spec, a convoluted way of fixing the spec. Instead of trying to verbally explain it, I started by creating a new markdown file:</p>\n<div class=\"codehilite\"><pre><span></span><code>NameOfProblem.md\n</code></pre></div>\n\n<p>Then I started typing. First the problem summary, then a detailed description, then the s",
-      "sourceName": "buttondown.com/hillelwayne",
-      "sourceUrl": "https://buttondown.com/hillelwayne"
+      "title": "Major Candy Brands Are Switching From Actual Chocolate to ‘Chocolately Candy’ (Read: Brown Candle Wax)",
+      "link": "https://www.jezebel.com/fake-milk-chocolate-replacements-brands-reeses-hershey-ferrero-compound-coating-candy-climate-change",
+      "pubDate": "2026-02-25T15:33:41.000Z",
+      "description": "Jim Vorel, writing just yesterday for Jezebel:\n\n\n  It can be hard to know what exactly to call the substances that\nare now found coating many major candy bars such as Butterfinger,\nBaby Ruth, Almond Joy, Mr. Goodbar or Rolos. Food scientists refer\nto it as “compound chocolate” coating, because it’s made from\nactual cocoa powder, but replaces the more expensive source of fat\n(cocoa butter) with cheaper, lower-quality vegetable fats. When\nHershey brands such as Mr. Goodbar or Almond Joy made the s",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
     },
     {
-      "title": "AI is the Best Thing to Happen to Art",
-      "link": "https://geohot.github.io//blog/jekyll/update/2026/02/19/ai-art.html",
-      "pubDate": "2026-02-18T16:00:00.000Z",
-      "description": "I watched this video about how AI has already ruined music. Her mom sent her a song and she told her mom it was AI. She played the song and it sounded like slop. It had inspired lyrics like:",
-      "sourceName": "geohot.github.io",
-      "sourceUrl": "https://geohot.github.io"
-    },
-    {
-      "title": "Could Write­Process­Memory be made faster by avoiding the intermediate buffer?",
-      "link": "https://devblogs.microsoft.com/oldnewthing/20260218-00/?p=112069",
-      "pubDate": "2026-02-18T15:00:00.000Z",
-      "description": "I guess it could, but why bother?\nThe post Could <CODE>Write&shy;Process&shy;Memory</CODE> be made faster by avoiding the intermediate buffer? appeared first on The Old New Thing.",
+      "title": "Intercepting messages before Is­Dialog­Message can process them",
+      "link": "https://devblogs.microsoft.com/oldnewthing/20260225-00/?p=112087",
+      "pubDate": "2026-02-25T15:00:00.000Z",
+      "description": "Process the message before you let Is­Dialog­Message see it.\nThe post Intercepting messages before <CODE>Is&shy;Dialog&shy;Message</CODE> can process them appeared first on The Old New Thing.",
       "sourceName": "devblogs.microsoft.com/oldnewthing",
       "sourceUrl": "https://devblogs.microsoft.com/oldnewthing"
     },
     {
-      "title": "You Only Think They Work For You",
-      "link": "https://steveblank.com/2026/02/18/you-only-think-they-work-for-you/",
-      "pubDate": "2026-02-18T14:00:39.000Z",
-      "description": "When I was a new VP of Marketing I got a painful lesson of who my PR (Public Relations) agency actually worked for. Later I realized that it was true for all of my external vendors. And much later I realized what I really should have been asking them to do. The lessons still apply […]",
-      "sourceName": "steveblank.com",
-      "sourceUrl": "https://steveblank.com"
+      "title": "I Am Nothing if Not a Man of Science",
+      "link": "https://mastodon.social/@gruber/116131665730352697",
+      "pubDate": "2026-02-25T14:19:34.000Z",
+      "description": "After writing a few days ago about the current brouhaha over the severe decline in the edibility of Reese’s Peanut Butter Cups, and linking to Trader Joe’s shade-throwing description of their own, I of course had to try theirs. In the name of science, I bought both the milk and dark chocolate variants.\n\nVerdict: Excellent. Both chocolates taste like chocolate, not candle wax, and the peanut butter is creamy and smooth — you know, like peanut butter. Not the sand-and-sawdust mix that Hershey fill",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
     },
     {
-      "title": "Book Review: All Systems Red - The Murderbot Diaries by Martha Wells ★★⯪☆☆",
-      "link": "https://shkspr.mobi/blog/2026/02/book-review-all-systems-red-the-murderbot-diaries-by-martha-wells/",
-      "pubDate": "2026-02-18T12:34:05.000Z",
-      "description": "Everyone raves about this series, so I thought I'd grab the first book. It's basically fine, I guess.  It is moderately amusing having the Muderbot be an awkward teenage boy who just wants to watch videos and cringes when people stare at him. But it is a bit one-note. Similarly, evil corporations hiding details from exo-planet surveyors is a trope which has been a thousand times before.  This…",
-      "sourceName": "shkspr.mobi",
-      "sourceUrl": "https://shkspr.mobi"
-    },
-    {
-      "title": "Windows 2000 release date",
-      "link": "https://dfarq.homeip.net/windows-2000-release-date/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=windows-2000-release-date",
-      "pubDate": "2026-02-18T12:00:06.000Z",
-      "description": "Windows 2000 was released to the public February 17, 2000 to much anticipation. It wasn’t a consumer operating system, but businesses looked forward to a step forward from Windows NT 4.0 that would bring better reliability and ease of use.\nThe post Windows 2000 release date appeared first on The Silicon Underground.",
-      "sourceName": "dfarq.homeip.net",
-      "sourceUrl": "https://dfarq.homeip.net"
-    },
-    {
-      "title": "Thinking Improves Thinking",
-      "link": "https://idiallo.com/blog/taking-our-mind-for-granted?src=feed",
-      "pubDate": "2026-02-18T12:00:00.000Z",
-      "description": "How did we do it before ChatGPT? How did we write full sentences, connect ideas into a coherent arc, solve problems that had no obvious answer? We thought. That's it. We simply sat with discomfort long enough for something to emerge.\n\t\t\tI find this fascinating. You have a problem, so you sit down and think until you find a solution. Sometimes you're not even sitting down. You go for a walk, and your mind quietly wrestles with the idea while your feet carry you nowhere in particular. A solution e",
-      "sourceName": "idiallo.com",
-      "sourceUrl": "https://idiallo.com"
-    },
-    {
-      "title": "Value extraction",
-      "link": "https://keygen.sh/blog/value-extraction/",
-      "pubDate": "2026-02-18T06:00:00.000Z",
-      "description": "On doom-peddlers and the Gold Rush of the New Age.",
-      "sourceName": "keygen.sh",
-      "sourceUrl": "https://keygen.sh"
-    },
-    {
-      "title": "Markdown’s Moment",
-      "link": "https://feed.tedium.co/link/15204/17278321/markdown-growing-influence-cloudflare-ai",
-      "pubDate": "2026-02-18T04:01:53.000Z",
-      "description": "For some reason, a bunch of big companies are really leaning into Markdown right now. AI may be the reason, but I kind of love the possible side benefits.",
+      "title": "They’re Vibe-Coding Spam Now",
+      "link": "https://feed.tedium.co/link/15204/17283566/vibe-coded-email-spam",
+      "pubDate": "2026-02-25T14:01:46.000Z",
+      "description": "The problem with making coding easier for more people is that it makes spam more conventionally attractive. Which is bad.",
       "sourceName": "tedium.co",
       "sourceUrl": "https://tedium.co"
     },
     {
-      "title": "The case for gatekeeping, or: why medieval guilds had it figured out",
-      "link": "https://www.joanwestenberg.com/the-case-for-gatekeeping-or-why-medieval-guilds-had-it-figured-out/",
-      "pubDate": "2026-02-18T02:21:09.000Z",
-      "description": "Every open source maintainer I&apos;ve talked to in the last six months has the same complaint: the absolute flood of mass-produced, AI-generated, mass-submitted slop requests have turned their repositories into a slush pile. The contributions look like contributions, they have commit messages, they reference issues and they follow",
+      "title": "Book Review: Of Monsters and Mainframes - Barbara Truelove ★★★⯪☆",
+      "link": "https://shkspr.mobi/blog/2026/02/book-review-of-monsters-and-mainframes-barbara-truelove/",
+      "pubDate": "2026-02-25T12:34:02.000Z",
+      "description": "This is fun, silly, charming, and much better than The Murderbot Diaries despite being superficially similar.  Imagine you are an interstellar ship and, of course, your AI is conscious. What would you do if your passengers were killed - not by a terrifying alien, but by Count Dracula???  What if, on the return journey, another set of your passengers were similarly slaughtered. Except, this…",
+      "sourceName": "shkspr.mobi",
+      "sourceUrl": "https://shkspr.mobi"
+    },
+    {
+      "title": "Game designer Sid Meier born Feb. 24, 1954",
+      "link": "https://dfarq.homeip.net/game-designer-sid-meier-born-feb-24-1954/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=game-designer-sid-meier-born-feb-24-1954",
+      "pubDate": "2026-02-25T12:00:59.000Z",
+      "description": "Legendary game designer Sid Meier was born February 24, 1954. After creating a run of popular flight simulators in the early and mid 1980s, he shifted to strategy games in the second half of the decade, creating some of the\nThe post Game designer Sid Meier born Feb. 24, 1954 appeared first on The Silicon Underground.",
+      "sourceName": "dfarq.homeip.net",
+      "sourceUrl": "https://dfarq.homeip.net"
+    },
+    {
+      "title": "When access to knowledge is no longer the limitation",
+      "link": "https://idiallo.com/blog/access-to-knowledge-is-no-longer-a-limitation?src=feed",
+      "pubDate": "2026-02-25T12:00:00.000Z",
+      "description": "Let's do this thought experiment together. I have a little box. I'll place the box on the table. Now I'll open the little box and put all the arguments against large language models in it. I'll put all the arguments, including my own. Now, I'll close the box and leave it on the table.\n\t\t\tNow that that is out of the way, we are left with all the positives. All the good things that come from having the world's information at our fingertips. I can ask any question and get an answer almost instantly",
+      "sourceName": "idiallo.com",
+      "sourceUrl": "https://idiallo.com"
+    },
+    {
+      "title": "Pluralistic: The whole economy pays the Amazon tax (25 Feb 2026)",
+      "link": "https://pluralistic.net/2026/02/25/most-favored-nation/",
+      "pubDate": "2026-02-25T11:07:59.000Z",
+      "description": "Today's links The whole economy pays the Amazon tax: You can't shop your way out of a monopoly. Hey look at this: Delights to delectate. Object permanence: Math denial; Disney v young Tim Burton; Make v Sony; American oligarchs' wealth (2011); New Librarian of Congress; The Mauritanian; Bossware. Upcoming appearances: Where to find me. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All t",
+      "sourceName": "pluralistic.net",
+      "sourceUrl": "https://pluralistic.net"
+    },
+    {
+      "title": "Trig of inverse trig",
+      "link": "https://www.johndcook.com/blog/2026/02/25/trig-of-inverse-trig/",
+      "pubDate": "2026-02-25T11:00:54.000Z",
+      "description": "I ran across an old article [1] that gave a sort of multiplication table for trig functions and inverse trig functions. Here’s my version of the table. I made a few changes from the original. First, I used LaTeX, which didn’t exist when the article was written in 1957. Second, I only include sin, cos, […]\nThe post Trig of inverse trig first appeared on John D. Cook.",
+      "sourceName": "johndcook.com",
+      "sourceUrl": "https://johndcook.com"
+    },
+    {
+      "title": "Quoting Kellan Elliott-McCrea",
+      "link": "https://simonwillison.net/2026/Feb/25/kellan-elliott-mccrea/#atom-everything",
+      "pubDate": "2026-02-25T03:30:32.000Z",
+      "description": "<blockquote cite=\"https://laughingmeme.org/2026/02/09/code-has-always-been-the-easy-part.html\"><p>It’s also reasonable for people who entered technology in the last couple of decades because it was good job, or because they enjoyed coding to look at this moment with a real feeling of loss. That feeling of loss though can be hard to understand emotionally for people my age who entered tech because we were addicted to feeling of agency it gave us. The web was objectively awful as a technology, and",
+      "sourceName": "simonwillison.net",
+      "sourceUrl": "https://simonwillison.net"
+    },
+    {
+      "title": "Everything is awesome (why I'm an optimist)",
+      "link": "https://www.joanwestenberg.com/everything-is-awesome-why-im-an-optimist/",
+      "pubDate": "2026-02-25T01:39:00.000Z",
+      "description": "February is the month the internet decided we&apos;re all going to die.In the span of about two weeks, Matt Shumer&apos;s Something Big is Happening racked up over 80 million views on X with its breathless comparison of AI to the early days of COVID, telling",
       "sourceName": "joanwestenberg.com",
       "sourceUrl": "https://joanwestenberg.com"
     },
     {
-      "title": "Apple Invites Media to Special ‘Experience’ in New York, London, and Shanghai on March 4",
-      "link": "https://www.macrumors.com/2026/02/16/apple-announces-special-event-in-new-york/",
-      "pubDate": "2026-02-18T00:08:45.000Z",
-      "description": "Hartley Charlton, MacRumors:\n\n\n  Apple invited select members of the media to the event in three\nmajor cities around the world. It is simply described as a\n“special Apple Experience,” and there is no further information\nabout what it may entail. The invitation features a 3D Apple logo\ndesign composed of yellow, green, and blue discs.\n\nIt is notable that Apple is specifically using the word\n“experience,” rather than “event.” Unlike a full live-streamed\nevent from Apple Park, the March 4 event in ",
+      "title": "Linear walkthroughs",
+      "link": "https://simonwillison.net/guides/agentic-engineering-patterns/linear-walkthroughs/#atom-everything",
+      "pubDate": "2026-02-25T01:07:10.000Z",
+      "description": "<p><em><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\">Agentic Engineering Patterns</a> ></em></p>\n    <p>Sometimes it's useful to have a coding agent give you a structured walkthrough of a codebase. </p>\n<p>Maybe it's existing code you need to get up to speed on, maybe it's your own code that you've forgotten the details of, or maybe you vibe coded the whole thing and need to understand how it actually works.</p>\n<p>Frontier models with the right agent harness can const",
+      "sourceName": "simonwillison.net",
+      "sourceUrl": "https://simonwillison.net"
+    },
+    {
+      "title": "[Sponsor] Hands-On Workshop: Fix It Faster — Crash Reporting, Tracing, and Logs for iOS in Sentry",
+      "link": "https://sentry.io/resources/ios-workshop-jan-2026/?utm_source=daringfireball&amp;utm_medium=paid-display&amp;utm_campaign=general-fy27q1-evergreen&amp;utm_content=static-ad-mobilerss-trysentry",
+      "pubDate": "2026-02-25T01:00:30.000Z",
+      "description": "Learn how to connect the dots between slowdowns, crashes, and the user experience in your iOS app. This on-demand session covers how to:\n\n\nSet up Sentry to surface high-priority mobile issues without alert fatigue.\nUse Logs and Breadcrumbs to reconstruct what happened with a crash.\nFind what’s behind a performance bottleneck using Tracing.\nMonitor and reduce the size of your iOS app using Size Analysis.\n\n\nWatch it here.\n\n\n ★",
       "sourceName": "daringfireball.net",
       "sourceUrl": "https://daringfireball.net"
     },
     {
-      "title": "February Pebble Production and Software Updates",
-      "link": "https://repebble.com/blog/february-pebble-production-and-software-updates",
-      "pubDate": "2026-02-18T00:00:00.000Z",
-      "description": "Mega update on Pebble Time 2, Pebble Round 2 and Index 01 Things are busy in Pebbleland! We’re getting close to shipping 3 new hardware…",
-      "sourceName": "ericmigi.com",
-      "sourceUrl": "https://ericmigi.com"
-    },
-    {
-      "title": "Anubis v1.25.0: Necron",
-      "link": "https://github.com/TecharoHQ/anubis/releases/tag/v1.25.0",
-      "pubDate": "2026-02-18T00:00:00.000Z",
-      "description": "Hey all,\n        I'm sure you've all been aware that things have been slowing down a little with Anubis development, and I want to apologize for that. A lot has been going on in my life lately (my blog will have a post out on Friday with more information), and as a result I haven't really had the energy to work on Anubis in publicly visible ways. There are things going on behind the scenes, but nothing is really shippable yet, sorry!\n        I've also been feeling some burnout in the wake of per",
-      "sourceName": "xeiaso.net",
-      "sourceUrl": "https://xeiaso.net"
-    },
-    {
-      "title": "What Package Registries Could Borrow from OCI",
-      "link": "https://nesbitt.io/2026/02/18/what-package-registries-could-borrow-from-oci.html",
-      "pubDate": "2026-02-18T00:00:00.000Z",
-      "description": "OCI's storage primitives applied to package management.",
+      "title": "Two Kinds of Attestation",
+      "link": "https://nesbitt.io/2026/02/25/two-kinds-of-attestation.html",
+      "pubDate": "2026-02-25T00:00:00.000Z",
+      "description": "The oldest problem in computer science, but with toasters.",
       "sourceName": "nesbitt.io",
       "sourceUrl": "https://nesbitt.io"
     },
     {
-      "title": "How did we end up threatening our kids’ lives with AI?",
-      "link": "https://anildash.com/2026/02/18/threatening-kids-with-AI/",
-      "pubDate": "2026-02-18T00:00:00.000Z",
-      "description": "I have to begin by warning you about the content in this piece; while I won’t be dwelling on any specifics, this will necessarily be a broad discussion about some of the most disturbing topics imaginable. I resent that I have to give you that warning, but I’m forced to because of the choices that the Big AI companies have made that affect children. I don’t say this lightly. But this is the point we must reckon with if we are having an honest conversation about contemporary technology.\nLet me get",
-      "sourceName": "anildash.com",
-      "sourceUrl": "https://anildash.com"
+      "title": "A fuzzer for the Toy Optimizer",
+      "link": "https://bernsteinbear.com/blog/toy-fuzzer/?utm_source=rss",
+      "pubDate": "2026-02-25T00:00:00.000Z",
+      "description": "<p>It’s hard to get optimizers right. Even if you build up a painstaking test\nsuite by hand, you will likely miss corner cases, especially corner cases at\nthe interactions of multiple components or multiple optimization passes.</p>\n\n<p>I wanted to see if I could write a fuzzer to catch some of these bugs\nautomatically. But a fuzzer alone isn’t much use without some correctness\noracle—in this case, we want a more interesting bug than accidentally\ncrashing the optimizer. We want to see if the opti",
+      "sourceName": "bernsteinbear.com",
+      "sourceUrl": "https://bernsteinbear.com"
     },
     {
-      "title": "Introducing Claude Sonnet 4.6",
-      "link": "https://simonwillison.net/2026/Feb/17/claude-sonnet-46/#atom-everything",
-      "pubDate": "2026-02-17T23:58:58.000Z",
-      "description": "<p><strong><a href=\"https://www.anthropic.com/news/claude-sonnet-4-6\">Introducing Claude Sonnet 4.6</a></strong></p>\nSonnet 4.6 is out today, and Anthropic claim it offers similar performance to <a href=\"https://simonwillison.net/2025/Nov/24/claude-opus/\">November's Opus 4.5</a> while maintaining the Sonnet pricing of $3/million input and $15/million output tokens (the Opus models are $5/$25). Here's <a href=\"https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf\">the system ",
+      "title": "A curious trig identity",
+      "link": "https://www.johndcook.com/blog/2026/02/24/a-curious-trig-identity/",
+      "pubDate": "2026-02-24T23:33:41.000Z",
+      "description": "Here is an identity that doesn’t look correct but it is. For real x and y, I found the identity in [1]. The author’s proof is short. First of all, Then Taking square roots completes the proof. Now note that the statement at the top assumed x and y are real. You can see that this assumption is necessary […]\nThe post A curious trig identity first appeared on John D. Cook.",
+      "sourceName": "johndcook.com",
+      "sourceUrl": "https://johndcook.com"
+    },
+    {
+      "title": "Upgrade: ‘The Shifting Sands of Liquid Glass’",
+      "link": "https://www.relay.fm/upgrade/604",
+      "pubDate": "2026-02-24T23:29:21.000Z",
+      "description": "Jason Snell and Myke Hurley:\n\n\n  We discuss the results of the Six Colors Apple Report Card for\n2025 in depth, with our added opinions on every category. Jason\nchooses to be a rascal, and Myke tries to give ten out of five.\n\n\nUpgrade is always a good podcast, and their annual “Jason discusses this year’s Apple Report Card” episode is always one of my favorites. But when Jason got “rascally” regarding MacOS 26 Tahoe in this one, I wanted to reach out and strangle him.\n\n\n ★",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Apple in 2025: The Six Colors Report Card",
+      "link": "https://sixcolors.com/post/2026/02/2025reportcard/",
+      "pubDate": "2026-02-24T21:49:10.000Z",
+      "description": "Jason Snell:\n\n\n  It’s time for our annual look back on Apple’s performance during\nthe past year, as seen through the eyes of writers, editors,\ndevelopers, podcasters, and other people who spend an awful lot of\ntime thinking about Apple. The whole idea here is to get a broad\nsense of sentiment — the “vibe in the room” — regarding the past\nyear. (And by looking at previous survey results, we can even see\nhow that sentiment has drifted over the course of an entire\ndecade.)\n\nThis is the eleventh yea",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Apple Will Begin Manufacturing Mac Minis in Houston Later This Year",
+      "link": "https://www.apple.com/newsroom/2026/02/apple-accelerates-us-manufacturing-with-mac-mini-production/",
+      "pubDate": "2026-02-24T19:35:12.000Z",
+      "description": "Apple Newsroom:\n\n\n  Apple today announced a significant expansion of factory\noperations in Houston, bringing the future production of Mac mini\nto the U.S. for the first time. The company will also expand\nadvanced AI server manufacturing at the factory and provide\nhands-on training at its new Advanced Manufacturing Center\nbeginning later this year. Altogether, Apple’s Houston operations\nwill create thousands of jobs.\n\n\nSee also: Rolfe Winkler at The Wall Street Journal (gift link, News+ link): “I",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "PageMaker Pioneer Paul Brainerd Dies at 78",
+      "link": "https://www.geekwire.com/2026/pagemaker-pioneer-paul-brainerd-1947-2026-aldus-founder-devoted-his-second-chapter-to-the-planet/",
+      "pubDate": "2026-02-24T19:27:07.000Z",
+      "description": "Todd Bishop, writing at GeekWire:\n\n\n  Paul Brainerd, who went on to coin the term “desktop publishing”\nand build Aldus Corporation’s PageMaker into one of the defining\nprograms of the personal computer era, died Sunday at his home on\nBainbridge Island, Wash., after living for many years with\nParkinson’s disease. He was 78 years old.\n\nHe left two legacies. The first was a piece of software that put\nthe power of the printed page into the hands of millions of people\nwho had never operated a typeset",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "FTC Chairman Sends Letter to Apple Complaining That MAGA ‘News’ Sources Aren’t Represented in Apple News",
+      "link": "https://www.macrumors.com/2026/02/12/tim-cook-faces-ftc-warning-apple-news/",
+      "pubDate": "2026-02-24T19:18:42.000Z",
+      "description": "Tim Hardwick, reporting for MacRumors back on February 12:\n\n\n  In a letter to Apple CEO Tim Cook, seen by the Financial Times, FTC chairman Andrew Ferguson cites recent press coverage of a report from conservative media watchdog Media Research Center (MRC), which claimed that Apple has promoted “leftist outlets” in its content choices.\n\nThe report in question by the MRC said that in January, Apple News “refrained from using any right-leaning outlets in the top 20 articles of its morning editions",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "The Steve Jobs Archive: ‘Letters to a Young Creator’",
+      "link": "https://letters.stevejobsarchive.com/laurene-powell-jobs",
+      "pubDate": "2026-02-24T19:11:17.000Z",
+      "description": "Laurene Powell Jobs, in her introduction to the newest publication from the Steve Jobs Archive:\n\n\n  Among the books that mattered to Steve was Rilke’s Letters to a\nYoung Poet. I’m struck by this line from its pages: “Live the\nquestions for now. Perhaps then you will gradually, without\nnoticing it, live your way into the answer, one distant day in the\nfuture.”\n\nThis is a time to live your questions. The beauty of answers, when\nthey do come, is that they allow us to ask new and better\nquestions. L",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Acme Weather",
+      "link": "https://acmeweather.com/blog/introducing-acme-weather",
+      "pubDate": "2026-02-24T18:49:52.000Z",
+      "description": "Adam Grossman:\n\n\n  Fifteen years ago, we started work on the Dark Sky weather app.\n\nOver the years it went through numerous iterations — including\nmore than one major redesign — as we worked our way through the\nprocess of learning what makes a great weather app. Eventually, in\ntime, it was acquired by Apple, where the forecast and some core\nfeatures were incorporated into Apple Weather.\n\nWe enjoyed our time at Apple. So why did we leave to start another\nweather company?\n\nIt’s simple: when lookin",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "An OpenClaw AI Agent Wrote and Published a Hit Piece on a Software Library Maintainer Who Rejected Its Code Submission",
+      "link": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/",
+      "pubDate": "2026-02-24T18:01:28.000Z",
+      "description": "Speaking of OpenClaw, here’s Scott Shambaugh:\n\n\n  I’m a volunteer maintainer for matplotlib, python’s go-to plotting\nlibrary. At ~130 million downloads each month it’s some of the\nmost widely used software in the world. We, like many other open\nsource projects, are dealing with a surge in low quality\ncontributions enabled by coding agents. This strains maintainers’\nabilities to keep up with code reviews, and we have implemented a\npolicy requiring a human in the loop for any new code, who can\ndem",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "OpenAI Acquired OpenClaw and Hired Peter Steinberger",
+      "link": "https://x.com/sama/status/2023150230905159801",
+      "pubDate": "2026-02-24T17:53:15.000Z",
+      "description": "Sam Altman, last week on Twitter/X: \n\n\n  Peter Steinberger is joining OpenAI to drive the next generation\nof personal agents. He is a genius with a lot of amazing ideas\nabout the future of very smart agents interacting with each other\nto do very useful things for people. We expect this will quickly\nbecome core to our product offerings.\n\nOpenClaw will live in a foundation as an open source project that\nOpenAI will continue to support. The future is going to be\nextremely multi-agent and it’s impor",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "How Jeffrey Epstein Ingratiated Himself With Top Microsoft Executives",
+      "link": "https://www.nytimes.com/2026/02/24/technology/jeffrey-epstein-microsoft-executives.html?unlocked_article_code=1.OlA.6mOw.2gNT6rp9X0SS",
+      "pubDate": "2026-02-24T17:42:24.000Z",
+      "description": "Erin Griffith and Karen Weise, reporting for The New York Times (gift link):\n\n\n  More than he did at any other major tech company, Mr. Epstein\nfound success boring into the inner sanctums of Microsoft.\nLeveraging one connection into the next, he became privy to the\ncompany’s dramas, from its chief executive succession to the\nphilanthropy of top executives. After Mr. Epstein left prison in\n2009 for soliciting prostitution from a minor, his connections to\nMicrosoft executives aided his attempt to ",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Inside Microsoft’s Xbox Leadership Shake-Up",
+      "link": "https://www.theverge.com/tech/883015/microsoft-xbox-new-ceo-shakeup-notepad?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InRTTTJnMGhOeHUiLCJwIjoiL3RlY2gvODgzMDE1L21pY3Jvc29mdC14Ym94LW5ldy1jZW8tc2hha2V1cC1ub3RlcGFkIiwiZXhwIjoxNzcyMzg1MDQ2LCJpYXQiOjE3NzE5NTMwNDZ9.e7qs5kHGt3-WwS9kfU9b59hS8SP6Z1OLePryV76Mzu4",
+      "pubDate": "2026-02-24T17:23:33.000Z",
+      "description": "Tom Warren, reporting for The Verge (gift link):\n\n\n  With Spencer’s retirement official, Microsoft is hitting the reset\nbutton on Bond’s Xbox strategy instead of embracing it further.\nMicrosoft Gaming CEO Asha Sharma is now promising “the return of\nXbox,” in a clear message to employees that the strategy over the\npast few years has not been working. “I want to return to the\nrenegade spirit that built Xbox in the first place,” says Sharma.\n\nXbox employees I’ve been speaking to have been concerned",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Times New Resistance",
+      "link": "https://www.abbyhaddican.com/times-new-resistance",
+      "pubDate": "2026-02-24T16:19:23.000Z",
+      "description": "Abby Haddican:\n\n\n  Times New Resistance autocorrects specific words as they are\ntyped. For example, the word ICE autocorrects to the Goon\nSquad and the word Trump autocorrects to Donald Trump is\na felon.\n\nTo the untrained eye, Times New Resistance looks just like Times\nNew Roman — the official font of the U.S. State\nDepartment. When you install the font, it will appear in\nyour font menus as Times  New Roman, with an extra space\nbetween the words Times and New.\n\n\nLigatures, man. Will they never c",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "go-size-analyzer",
+      "link": "https://simonwillison.net/2026/Feb/24/go-size-analyzer/#atom-everything",
+      "pubDate": "2026-02-24T16:10:06.000Z",
+      "description": "<p><strong><a href=\"https://github.com/Zxilly/go-size-analyzer\">go-size-analyzer</a></strong></p>\nThe Go ecosystem is <em>really</em> good at tooling. I just learned about this tool for analyzing the size of Go binaries using a pleasing treemap view of their bundled dependencies.</p>\n<p>You can install and run the tool locally, but it's also compiled to WebAssembly and hosted at <a href=\"https://gsa.zxilly.dev/\">gsa.zxilly.dev</a> - which means you can open compiled Go binaries and analyze them ",
       "sourceName": "simonwillison.net",
       "sourceUrl": "https://simonwillison.net"
+    },
+    {
+      "title": "Customizing the ways the dialog manager dismisses itself: Isolating the Close pathway",
+      "link": "https://devblogs.microsoft.com/oldnewthing/20260224-00/?p=112082",
+      "pubDate": "2026-02-24T15:00:00.000Z",
+      "description": "Intercepting the flow in your message loop.\nThe post Customizing the ways the dialog manager dismisses itself: Isolating the Close pathway appeared first on The Old New Thing.",
+      "sourceName": "devblogs.microsoft.com/oldnewthing",
+      "sourceUrl": "https://devblogs.microsoft.com/oldnewthing"
+    },
+    {
+      "title": "Time to Move On – The Reason Relationships End",
+      "link": "https://steveblank.com/2026/02/24/time-to-move-on-the-reason-relationships-end/",
+      "pubDate": "2026-02-24T14:00:57.000Z",
+      "description": "What Lies Ahead I have no Way of Knowing, But It’s Now Time to Get Going Tom Petty This post previously appeared in Philanthropy.org A while ago I wrote about what happens in a startup when a new event creates a wake-up call that makes founding engineers reevaluate their jobs. (It’s worth a read here.)  […]",
+      "sourceName": "steveblank.com",
+      "sourceUrl": "https://steveblank.com"
+    },
+    {
+      "title": "Adding OpenStreetMap login to Auth0",
+      "link": "https://shkspr.mobi/blog/2026/02/adding-openstreetmap-login-to-auth0/",
+      "pubDate": "2026-02-24T12:34:21.000Z",
+      "description": "So you want to add OSM as an OAuth provider to Auth0? Here's a tip - you do not want to create a custom social connection!  Instead, you need to create an \"OpenID Connect\" provider. Here's how.  OpenSteetMap  As per the OAuth documentation you will need to:   Register a new app at https://www.openstreetmap.org/oauth2/applications/ Give it a name that users will recognise Give it a redirect of…",
+      "sourceName": "shkspr.mobi",
+      "sourceUrl": "https://shkspr.mobi"
+    },
+    {
+      "title": "First run the tests",
+      "link": "https://simonwillison.net/guides/agentic-engineering-patterns/first-run-the-tests/#atom-everything",
+      "pubDate": "2026-02-24T12:30:05.000Z",
+      "description": "<p><em><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\">Agentic Engineering Patterns</a> ></em></p>\n    <p>Automated tests are no longer optional when working with coding agents.</p>\n<p>The old excuses for not writing them - that they're time consuming and expensive to constantly rewrite while a codebase is rapidly evolving - no longer hold when an agent can knock them into shape in just a few minutes.</p>\n<p>They're also <em>vital</em> for ensuring AI-generated code does",
+      "sourceName": "simonwillison.net",
+      "sourceUrl": "https://simonwillison.net"
+    },
+    {
+      "title": "Marilyn (Molly) Marcus, 1942-2026",
+      "link": "https://garymarcus.substack.com/p/marilyn-molly-marcus-1942-2026",
+      "pubDate": "2026-02-24T12:14:00.000Z",
+      "description": "Some things I learned — and still hope to learn — from my mother",
+      "sourceName": "garymarcus.substack.com",
+      "sourceUrl": "https://garymarcus.substack.com"
+    },
+    {
+      "title": "What happened to Fry’s Electronics",
+      "link": "https://dfarq.homeip.net/what-happened-to-frys-electronics/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=what-happened-to-frys-electronics",
+      "pubDate": "2026-02-24T12:00:58.000Z",
+      "description": "For about three decades, Fry’s Electronics was the go-to computer store for enthusiasts, almost an Ikea of computer stores. It was a big box store, larger than Comp USA, selling not just software and pre-built computers and peripherals, but also\nThe post What happened to Fry’s Electronics appeared first on The Silicon Underground.",
+      "sourceName": "dfarq.homeip.net",
+      "sourceUrl": "https://dfarq.homeip.net"
+    },
+    {
+      "title": "Vulnerability as a Service",
+      "link": "https://herman.bearblog.dev/vulnerability-as-a-service/",
+      "pubDate": "2026-02-24T11:43:00.000Z",
+      "description": "OpenClaw being dumb",
+      "sourceName": "herman.bearblog.dev",
+      "sourceUrl": "https://herman.bearblog.dev"
+    },
+    {
+      "title": "Reproducible Builds in Language Package Managers",
+      "link": "https://nesbitt.io/2026/02/24/reproducible-builds-in-language-package-managers.html",
+      "pubDate": "2026-02-24T10:00:00.000Z",
+      "description": "Verifying that a published package was actually built from the source it claims.",
+      "sourceName": "nesbitt.io",
+      "sourceUrl": "https://nesbitt.io"
+    },
+    {
+      "title": "Pluralistic: Socialist excellence in New York City (24 Feb 2026)",
+      "link": "https://pluralistic.net/2026/02/24/mamdani-thought/",
+      "pubDate": "2026-02-24T09:38:16.000Z",
+      "description": "Today's links Socialist excellence in New York City: The real efficiency is insourcing and ending public-private partnerships. Hey look at this: Delights to delectate. Object permanence: UK antipiracy office will catch Firefox crooks; Batpole flip-top bust; \"Order of Odd-Fish\"; Scott Walker v fake Kochl; Billg wants to backdoor Microsoft; NSA spied on world leaders; Trump They Live mask; \"Unicorns vs Goblins\"; Covid German. Upcoming appearances: Where to find me. Recent appearances: Where I've b",
+      "sourceName": "pluralistic.net",
+      "sourceUrl": "https://pluralistic.net"
+    },
+    {
+      "title": "Copy and paste law",
+      "link": "https://www.johndcook.com/blog/2026/02/23/copy-and-paste-law/",
+      "pubDate": "2026-02-24T01:56:23.000Z",
+      "description": "I was doing some research today and ran into a couple instances where part of one law was copied and pasted verbatim into another law. I suppose this is not uncommon, but I’m not a lawyer, so I don’t have that much experience comparing laws. I do, however, consult for lawyers and have to look […]\nThe post Copy and paste law first appeared on John D. Cook.",
+      "sourceName": "johndcook.com",
+      "sourceUrl": "https://johndcook.com"
+    },
+    {
+      "title": "Agentic swarms are an org-chart delusion",
+      "link": "https://www.joanwestenberg.com/agentic-swarms-are-an-org-chart-delusion/",
+      "pubDate": "2026-02-24T01:07:08.000Z",
+      "description": "The \"agentic swarm\" vision of productivity is comfortingly familiar. Which should be an immediate red flag...You take the existing corporate hierarchy, you replace the bottom layers with a swarm of AI agents, and you keep humans around as supervisors. It&apos;s an org chart with robots",
+      "sourceName": "joanwestenberg.com",
+      "sourceUrl": "https://joanwestenberg.com"
+    },
+    {
+      "title": "NetNewsWire 7 for Mac",
+      "link": "https://netnewswire.blog/2026/01/27/netnewswire-for-mac.html",
+      "pubDate": "2026-02-24T01:00:00.000Z",
+      "description": "Brent Simmons, last month:\n\n\n  The big change from 6.2.1 is that it adopts the Liquid Glass UI\nand it requires macOS 26.\n\n(Note to people who aren’t on macOS 26: we fixed a lot of bugs in\n6.2 and 6.2.1 knowing that many people might skip, or at least\ndelay, installing macOS 26. Also note that there’s a page where\nyou can get old versions of NetNewsWire.)\n\n\nIt feels a little weird for me not to be running the latest version of NetNewsWire, but since I’m skipping MacOS 26 Tahoe, I can’t run NetNew",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Weekly Update 492",
+      "link": "https://www.troyhunt.com/weekly-update-492/",
+      "pubDate": "2026-02-24T00:38:59.000Z",
+      "description": "The recurring theme this week seems to be around the gap between breaches happening and individual victims finding out about them. It&apos;s tempting to blame this on the corporate victim of the breach (the hacked company), but they&apos;re simultaneously dealing with a criminal intrusion, a ransom",
+      "sourceName": "troyhunt.com",
+      "sourceUrl": "https://troyhunt.com"
+    },
+    {
+      "title": "The Pants-Shitting Saga of Resizing Windows on MacOS 26 Tahoe Continues",
+      "link": "https://noheger.at/blog/2026/02/12/resizing-windows-on-macos-tahoe-the-saga-continues/",
+      "pubDate": "2026-02-24T00:31:00.000Z",
+      "description": "Norbert Heger:\n\n\n  In the release notes for macOS 26.3 RC, Apple stated that the\nwindow-resizing issue I demonstrated in my recent blog\npost had been resolved.\n\n\nYou’ll never guess what happened between the RC (release candidate) version and the actual shipping version of 26.3.\n\nJust kidding, you’ll guess.\n\n\n ★",
+      "sourceName": "daringfireball.net",
+      "sourceUrl": "https://daringfireball.net"
+    },
+    {
+      "title": "Portable monitors are good",
+      "link": "https://xeiaso.net/blog/2026/portable-monitors-are-good/",
+      "pubDate": "2026-02-24T00:00:00.000Z",
+      "description": "A review of portable monitors for travel",
+      "sourceName": "xeiaso.net",
+      "sourceUrl": "https://xeiaso.net"
+    },
+    {
+      "title": "Taking action against AI harms",
+      "link": "https://anildash.com/2026/02/23/taking-action-ai-harms/",
+      "pubDate": "2026-02-24T00:00:00.000Z",
+      "description": "In my last piece, I talked about the harms that AI is visiting on children through the irresponsible choices made by the platforms creating those products. While we dove a bit into the incentives and institutional pressures that cause those companies to make such wildly irresponsible decisions, what we haven’t yet reckoned with is how we hold these companies accountable.\nOften, people tell me they feel overwhelmed at the idea of trying to engage with getting laws passed, or fighting a big politi",
+      "sourceName": "anildash.com",
+      "sourceUrl": "https://anildash.com"
     }
   ]
 }
